@@ -151,6 +151,9 @@ cython_debug/
 !.vscode/extensions.json
 *.code-workspace
 
+# For unit tests and sandboxing
+testscript.py 
+
 # Local History for Visual Studio Code
 .history/
 
