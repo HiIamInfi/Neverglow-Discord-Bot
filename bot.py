@@ -2,6 +2,8 @@ import discord
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
+
 client = discord.Client()
 
 @client.event
@@ -14,7 +16,7 @@ async def on_message(message):
         return
     
     if message.content.startswith("$hello"):
-        await message.channel.send("Hello!")
+        await message.channel.send("Hello people!")
 
 client.run(os.getenv("BOT_TOKEN"))
 
