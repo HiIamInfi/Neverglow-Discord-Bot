@@ -1,22 +1,23 @@
 import discord
+from discord.ext import commands
 import os
+from discord.ext.commands.core import command
 from dotenv import load_dotenv
 
 load_dotenv()
 
-client = discord.Client()
+bot = commands.Bot(command_prefix="?")
 
-@client.event
+# Bot Commands
+
+@bot.command()
+async def test(ctx, arg):
+    await ctx.send(arg)
+
+# Bot Events
+
+@bot.event
 async def on_ready():
-    print("We up and running and running as {0.user}".format(client))
+    print("We up and running and running as {0.user}".format(bot))
 
-@client.event
-async def on_message(message):
-    if message.author == client .user:
-        return
-    
-    if message.content.startswith("$hello"):
-        await message.channel.send("Hello people!")
-
-client.run(os.getenv("BOT_TOKEN"))
-
+bot.run(os.getenv("BOT_TOKEN"))
