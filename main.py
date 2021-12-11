@@ -1,7 +1,10 @@
-print("Placeholder")
+from dotenv import load_dotenv
+import bot
+
+load_dotenv()
 
 def main():
-    print("Placeholder 2")
+    print("Discord Bot something something")
 
 if __name__ == "__main__":
     main()
