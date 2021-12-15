@@ -10,14 +10,17 @@ bot = commands.Bot(command_prefix="?")
 
 # Bot Commands
 
+
 @bot.command()
 async def test(ctx, arg):
     await ctx.send(arg)
 
 # Bot Events
 
+
 @bot.event
 async def on_ready():
     print("We up and running and running as {0.user}".format(bot))
+
 
 bot.run(os.getenv("BOT_TOKEN"))
