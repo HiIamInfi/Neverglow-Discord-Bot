@@ -1,10 +1,12 @@
 # Neverglow-Discord-Bot
+
 Discord Bot to manage certain Notifications on the Neverglow Discord
 
 ## Feature Roadmap
 
 - Idol Birthday Notification
 - Watch2Gether Functionality
+
 ## Start Developing
 
 ### Clone this project
