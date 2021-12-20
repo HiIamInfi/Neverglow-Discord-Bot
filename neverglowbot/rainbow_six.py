@@ -12,18 +12,22 @@ class Rainbow_Six(commands.Cog):
     def __init__(self, bot):
         self.client = bot
 
+    # Methods
+    def get_operators():
+        return
+
     # Events
     @commands.Cog.listener()
     async def on_ready(self):
         print("Extension Rainbow Six loaded")
 
     # Commands
-    @commands.command(name="r6-def")
+    @commands.command(name="r6-def", brief="Let the bot choose a defender for you")
     async def operator_defender(self, ctx):
         await ctx.send("Heard you were looking for a Defender?")
 
-    @commands.command(name="r6-att")
-    async def operator_defender(self, ctx):
+    @commands.command(name="r6-att", brief="Let the bot choose a attacker for you")
+    async def operator_attacker(self, ctx):
         await ctx.send("Heard you were looking for a Attacker?")
 
 
