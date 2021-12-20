@@ -6,6 +6,7 @@ import bot
 def main():
     load_dotenv()
     print("Discord Bot something something")
+    bot
 
 
 if __name__ == "__main__":
