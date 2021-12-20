@@ -18,7 +18,7 @@ class Magic_Conch_Shell(commands.Cog):
         print("Extension Magic Conch Shell loaded")
 
     # Commands
-    @commands.command(name="mgc-ask")
+    @commands.command(name="mgc-ask", brief="Ask the magic conch shell a question")
     async def ask_shell(self, ctx, *, question):
         responses = [
             "It is certain.",
