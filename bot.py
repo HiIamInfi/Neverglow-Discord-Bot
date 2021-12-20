@@ -20,13 +20,13 @@ async def test(ctx, arg):
 
 
 @bot.command()
-async def load(ctx, extensions):
-    bot.load_extension(f"neverglowbot.{extensions}")
+async def load(ctx, extension):
+    bot.load_extension(f"neverglowbot.{extension}")
 
 
 @bot.command()
-async def unload(ctx, extensions):
-    bot.unload_extension(f"neverglowbot.{extensions}")
+async def unload(ctx, extension):
+    bot.unload_extension(f"neverglowbot.{extension}")
 
 
 # Bot Events
