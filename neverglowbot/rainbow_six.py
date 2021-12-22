@@ -1,5 +1,8 @@
-import discord
+import json
+import os
 import random
+
+import discord
 from discord import client
 from discord.ext import commands
 from discord.ext.commands import bot
@@ -13,10 +16,13 @@ class Rainbow_Six(commands.Cog):
         self.client = bot
 
     # Methods
-    def get_operators():
-        return
+    def get_operators(group):
+        with open(os.getcwd()+"/neverglowbot/resources/r6_operators.json", "r") as read_file:
+            operator_data = json.load(read_file)
+        return operator_data[group]
 
     # Events
+
     @commands.Cog.listener()
     async def on_ready(self):
         print("Extension Rainbow Six loaded")
