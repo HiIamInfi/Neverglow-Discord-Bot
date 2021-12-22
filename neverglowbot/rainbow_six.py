@@ -39,8 +39,8 @@ class Rainbow_Six(commands.Cog):
     @commands.command(name="r6-att", brief="Let the bot choose a attacker for you")
     async def operator_attacker(self, ctx):
         attackers = get_operator("attacker")
-        att_pick = random.choice()
-        await ctx.send("Heard you were looking for a Attacker?")
+        att_pick = random.choice(attackers)
+        await ctx.send(f"Heard you were looking for a Attacker?\nCongrats your randomized defender is {att_pick}")
 
 
 def setup(bot):
