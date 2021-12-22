@@ -9,13 +9,15 @@ from discord.ext.commands import bot
 from discord.ext.commands.cog import Cog
 from discord.ext.commands.core import command
 
+from testscript import get_operators
+
 
 class Rainbow_Six(commands.Cog):
 
     def __init__(self, bot):
         self.client = bot
 
-    # Methods
+    # functions
     def get_operators(group):
         with open(os.getcwd()+"/neverglowbot/resources/r6_operators.json", "r") as read_file:
             operator_data = json.load(read_file)
@@ -30,7 +32,9 @@ class Rainbow_Six(commands.Cog):
     # Commands
     @commands.command(name="r6-def", brief="Let the bot choose a defender for you")
     async def operator_defender(self, ctx):
-        await ctx.send("Heard you were looking for a Defender?")
+        defenders = get_operators("defender")
+        def_pick = random.choice(defenders)
+        await ctx.send(f"Heard you were looking for a Defender?\nCongrats your randomized defender is {def_pick}")
 
     @commands.command(name="r6-att", brief="Let the bot choose a attacker for you")
     async def operator_attacker(self, ctx):
