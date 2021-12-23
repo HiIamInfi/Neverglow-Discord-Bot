@@ -15,11 +15,6 @@ bot = commands.Bot(command_prefix="?")
 
 
 @bot.command()
-async def test(ctx, arg):
-    await ctx.send(arg)
-
-
-@bot.command()
 async def load(ctx, extension):
     bot.load_extension(f"neverglowbot.{extension}")
 
@@ -27,6 +22,12 @@ async def load(ctx, extension):
 @bot.command()
 async def unload(ctx, extension):
     bot.unload_extension(f"neverglowbot.{extension}")
+
+
+@bot.command()
+async def reload(ctx, extension):
+    bot.unload_extension(f"neverglowbot.{extension}")
+    bot.load_extension(f"neverglowbot.{extension}")
 
 
 # Bot Events
