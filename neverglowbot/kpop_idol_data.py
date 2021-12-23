@@ -22,7 +22,8 @@ class Kpop_Idol_Data(commands.Cog):
     # Commands
     @commands.command()
     async def tester(self, ctx):
-        await ctx.send("Hi")
+        temp = os.getenv("IDOL_ALERT_CHANNEL")
+        await ctx.send(f"Hi {temp}")
 
 
 def setup(bot):
