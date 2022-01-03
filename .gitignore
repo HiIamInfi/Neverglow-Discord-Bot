@@ -152,7 +152,10 @@ cython_debug/
 *.code-workspace
 
 # For unit tests and sandboxing
-testscript.py 
+testscript.py
+
+# For logging of dates
+last_check.txt
 
 # Local History for Visual Studio Code
 .history/
