@@ -30,6 +30,10 @@ async def reload(ctx, extension):
     bot.load_extension(f"neverglowbot.{extension}")
 
 
+@bot.command()
+async def clear(ctx, amount=1):
+    await ctx.channel.purge(limit=amount)
+
 # Bot Events
 # Basis Events to be handled by the bot
 
