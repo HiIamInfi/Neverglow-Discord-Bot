@@ -4,6 +4,7 @@ import random
 
 import discord
 from discord import client
+from discord import channel
 from discord.ext import commands
 from discord.ext.commands import bot
 from discord.ext.commands.cog import Cog
@@ -22,6 +23,7 @@ class Rainbow_Six(commands.Cog):
 
     def __init__(self, bot):
         self.client = bot
+        self.r6_channel = int(os.getenv("RAINBOW_SIX_CHANNEL"))
 
     # Events
 
@@ -32,15 +34,25 @@ class Rainbow_Six(commands.Cog):
     # Commands
     @commands.command(name="r6-def", brief="Let the bot choose a defender for you")
     async def operator_defender(self, ctx):
+        # Get Operators and pick a random defender
         defenders = get_operator("defender")
         def_pick = random.choice(defenders)
-        await ctx.send(f"Heard you were looking for a Defender?\nCongrats your randomized defender is {def_pick}")
+        # Send a message with the picked operator
+        embed = discord.Embed(title="Police Captain Yiren says:", colour=discord.Colour.from_rgb(
+            167, 211, 166), type="rich", description=f"Heard you were looking for a Defender?\nCongrats your randomized defender is {def_pick}")
+        embed.set_thumbnail(url="https://i.imgur.com/Uu8Rsg1.jpg")
+        channel = self.client.get_channel(self.r6_channel)
+        await channel.send(embed=embed)
 
     @commands.command(name="r6-att", brief="Let the bot choose a attacker for you")
     async def operator_attacker(self, ctx):
         attackers = get_operator("attacker")
         att_pick = random.choice(attackers)
-        await ctx.send(f"Heard you were looking for a Attacker?\nCongrats your randomized defender is {att_pick}")
+        embed = discord.Embed(title="Police Captain Yiren says:", colour=discord.Colour.from_rgb(
+            167, 211, 166), type="rich", description=f"Heard you were looking for a Attacker?\nCongrats your randomized defender is {att_pick}")
+        embed.set_thumbnail(url="https://i.imgur.com/Uu8Rsg1.jpg")
+        channel = self.client.get_channel(self.r6_channel)
+        await channel.send(embed=embed)
 
 
 def setup(bot):
