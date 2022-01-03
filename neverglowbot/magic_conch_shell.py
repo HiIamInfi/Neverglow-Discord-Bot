@@ -19,7 +19,7 @@ class Magic_Conch_Shell(commands.Cog):
         print("Extension Magic Conch Shell loaded")
 
     # Commands
-    @commands.command(name="mgc-ask", brief="Ask the magic conch shell a question")
+    @commands.command(name="oracle", brief="Ask the magic conch shell a question")
     async def ask_shell(self, ctx, *, question):
         responses = [
             "It is certain.",
@@ -42,7 +42,10 @@ class Magic_Conch_Shell(commands.Cog):
             "My sources say no.",
             "Outlook not so good.",
             "Very doubtful."]
-        await ctx.send(f"Question: {question}\nAnswer: {random.choice(responses)}")
+        embed = discord.Embed(title="Oracle Sana says:", colour=discord.Colour.from_rgb(
+            167, 211, 166), type="rich", description=f"{random.choice(responses)} \n\n  (Question was: {question})")
+        embed.set_thumbnail(url="https://i.imgur.com/bprCsC4.jpeg")
+        await ctx.send(embed=embed)
 
 
 def setup(bot):
