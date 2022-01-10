@@ -1,71 +1,316 @@
 {
-    "defender":{
-        "Thorn": {
-            "name": "Thorn",
-            "primary": [],
-            "secondary": []
-        },
-        "Thunderbird",
-        "Aruni",
-        "Melusi",
-        "Oryx",
-        "Wamai",
-        "Goyo",
-        "Warden",
-        "Mozzie",
-        "Kaid",
-        "Clash",
-        "Maestro",
-        "Alibi",
-        "Vigil",
-        "Ela",
-        "Lesion",
-        "Mira",
-        "Echo",
-        "Caveira",
-        "Valkyrie",
-        "Frost",
-        "Mute",
-        "Smoke",
-        "Castle",
-        "Pulse",
-        "Doc",
-        "Rook",
-        "Jaeger",
-        "Bandit",
-        "Tachanka",
-        "Kapkan"},
-    "attacker":[
-        "Osa",
-        "Flores",
-        "Zero",
-        "Ace",
-        "Iana",
-        "Kali",
-        "Amaru",
-        "Nokk",
-        "Gridlock",
-        "Nomad",
-        "Maverick",
-        "Lion",
-        "Finka",
-        "Dokkaebi",
-        "Zofia",
-        "Ying",
-        "Jackal",
-        "Hibana",
-        "Capitao",
-        "Blackbeard",
-        "Buck",
-        "Sledge",
-        "Thatcher",
-        "Ash",
-        "Thermite",
-        "Montagne",
-        "Twitch",
-        "Blitz",
-        "IQ",
-        "Fuze",
-        "Glaz"
-    ]
+  "defender": {
+    "Thorn": {
+      "name": "Thorn",
+      "primary": [],
+      "secondary": []
+    },
+    "Thunderbird": {
+      "name": "Thunderbird",
+      "primary": [],
+      "secondary": []
+    },
+    "Aruni": {
+      "name": "Aruni",
+      "primary": [],
+      "secondary": []
+    },
+    "Melusi": {
+      "name": "Melusi",
+      "primary": [],
+      "secondary": []
+    },
+    "Oryx": {
+      "name": "Oryx",
+      "primary": [],
+      "secondary": []
+    },
+    "Wamai": {
+      "name": "Wamai",
+      "primary": [],
+      "secondary": []
+    },
+    "Goyo": {
+      "name": "Goyo",
+      "primary": [],
+      "secondary": []
+    },
+    "Warden": {
+      "name": "Warden",
+      "primary": [],
+      "secondary": []
+    },
+    "Mozzie": {
+      "name": "Mozzie",
+      "primary": [],
+      "secondary": []
+    },
+    "Kaid": {
+      "name": "Kaid",
+      "primary": [],
+      "secondary": []
+    },
+    "Clash": {
+      "name": "Clash",
+      "primary": [],
+      "secondary": []
+    },
+    "Maestro": {
+      "name": "Maestro",
+      "primary": [],
+      "secondary": []
+    },
+    "Alibi": {
+      "name": "Alibi",
+      "primary": [],
+      "secondary": []
+    },
+    "Vigil": {
+      "name": "Vigil",
+      "primary": [],
+      "secondary": []
+    },
+    "Ela": {
+      "name": "Ela",
+      "primary": [],
+      "secondary": []
+    },
+    "Lesion": {
+      "name": "Lesion",
+      "primary": [],
+      "secondary": []
+    },
+    "Mira": {
+      "name": "Mira",
+      "primary": [],
+      "secondary": []
+    },
+    "Echo": {
+      "name": "Echo",
+      "primary": [],
+      "secondary": []
+    },
+    "Caveira": {
+      "name": "Caveira",
+      "primary": [],
+      "secondary": []
+    },
+    "Valkyrie": {
+      "name": "Valkyrie",
+      "primary": [],
+      "secondary": []
+    },
+    "Frost": {
+      "name": "Frost",
+      "primary": [],
+      "secondary": []
+    },
+    "Mute": {
+      "name": "Mute",
+      "primary": [],
+      "secondary": []
+    },
+    "Smoke": {
+      "name": "Smoke",
+      "primary": [],
+      "secondary": []
+    },
+    "Castle": {
+      "name": "Castle",
+      "primary": [],
+      "secondary": []
+    },
+    "Pulse": {
+      "name": "Pulse",
+      "primary": [],
+      "secondary": []
+    },
+    "Doc": {
+      "name": "Doc",
+      "primary": [],
+      "secondary": []
+    },
+    "Rook": {
+      "name": "Rook",
+      "primary": [],
+      "secondary": []
+    },
+    "Jaeger": {
+      "name": "Jaeger",
+      "primary": [],
+      "secondary": []
+    },
+    "Bandit": {
+      "name": "Bandit",
+      "primary": [],
+      "secondary": []
+    },
+    "Tachanka": {
+      "name": "Tachanka",
+      "primary": [],
+      "secondary": []
+    },
+    "Kapkan": {
+      "name": "Kapkan",
+      "primary": [],
+      "secondary": []
+    }
+  },
+  "attacker": {
+    "Osa": {
+      "name": "Osa",
+      "primary": [],
+      "secondary": []
+    },
+    "Flores": {
+      "name": "Flores",
+      "primary": [],
+      "secondary": []
+    },
+    "Zero": {
+      "name": "Zero",
+      "primary": [],
+      "secondary": []
+    },
+    "Ace": {
+      "name": "Ace",
+      "primary": [],
+      "secondary": []
+    },
+    "Iana": {
+      "name": "Iana",
+      "primary": [],
+      "secondary": []
+    },
+    "Kali": {
+      "name": "Kali",
+      "primary": [],
+      "secondary": []
+    },
+    "Amaru": {
+      "name": "Amaru",
+      "primary": [],
+      "secondary": []
+    },
+    "Nokk": {
+      "name": "Nokk",
+      "primary": [],
+      "secondary": []
+    },
+    "Gridlock": {
+      "name": "Gridlock",
+      "primary": [],
+      "secondary": []
+    },
+    "Nomad": {
+      "name": "Nomad",
+      "primary": [],
+      "secondary": []
+    },
+    "Maverick": {
+      "name": "Maverick",
+      "primary": [],
+      "secondary": []
+    },
+    "Lion": {
+      "name": "Lion",
+      "primary": [],
+      "secondary": []
+    },
+    "Finka": {
+      "name": "Finka",
+      "primary": [],
+      "secondary": []
+    },
+    "Dokkaebi": {
+      "name": "Dokkaebi",
+      "primary": [],
+      "secondary": []
+    },
+    "Zofia": {
+      "name": "Zofia",
+      "primary": [],
+      "secondary": []
+    },
+    "Ying": {
+      "name": "Ying",
+      "primary": [],
+      "secondary": []
+    },
+    "Jackal": {
+      "name": "Jackal",
+      "primary": [],
+      "secondary": []
+    },
+    "Hibana": {
+      "name": "Hibana",
+      "primary": [],
+      "secondary": []
+    },
+    "Capitao": {
+      "name": "Capitao",
+      "primary": [],
+      "secondary": []
+    },
+    "Blackbeard": {
+      "name": "Blackbeard",
+      "primary": [],
+      "secondary": []
+    },
+    "Buck": {
+      "name": "Buck",
+      "primary": [],
+      "secondary": []
+    },
+    "Sledge": {
+      "name": "Sledge",
+      "primary": [],
+      "secondary": []
+    },
+    "Thatcher": {
+      "name": "Thatcher",
+      "primary": [],
+      "secondary": []
+    },
+    "Ash": {
+      "name": "Ash",
+      "primary": [],
+      "secondary": []
+    },
+    "Thermite": {
+      "name": "Thermite",
+      "primary": [],
+      "secondary": []
+    },
+    "Montagne": {
+      "name": "Montagne",
+      "primary": [],
+      "secondary": []
+    },
+    "Twitch": {
+      "name": "Twitch",
+      "primary": [],
+      "secondary": []
+    },
+    "Blitz": {
+      "name": "Blitz",
+      "primary": [],
+      "secondary": []
+    },
+    "IQ": {
+      "name": "IQ",
+      "primary": [],
+      "secondary": []
+    },
+    "Fuze": {
+      "name": "Fuze",
+      "primary": [],
+      "secondary": []
+    },
+    "Glaz": {
+      "name": "Glaz",
+      "primary": [],
+      "secondary": []
+    }
+  }
 }
