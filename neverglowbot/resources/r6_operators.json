@@ -1,6 +1,10 @@
 {
-    "defender":[
-        "Thorn",
+    "defender":{
+        "Thorn": {
+            "name": "Thorn",
+            "primary": [],
+            "secondary": []
+        },
         "Thunderbird",
         "Aruni",
         "Melusi",
@@ -30,7 +34,7 @@
         "Jaeger",
         "Bandit",
         "Tachanka",
-        "Kapkan"],
+        "Kapkan"},
     "attacker":[
         "Osa",
         "Flores",
