@@ -19,6 +19,12 @@ def get_operator(group):
     return operator_data[group]
 
 
+def get_armament(operator):
+    with open(os.getcwd()+"/neverglowbot/resources/r6_armament.json", "r") as read_file:
+        operator_armament = json.load(read_file)
+    return operator_armament[operator]
+
+
 class Rainbow_Six(commands.Cog):
 
     def __init__(self, bot):
@@ -37,9 +43,13 @@ class Rainbow_Six(commands.Cog):
         # Get Operators and pick a random defender
         defenders = get_operator("defender")
         def_pick = random.choice(defenders)
+        # Pick a random armament
+        armament = get_armament(def_pick)
+        arm_primary, arm_secondary = random.choice(
+            armament["primary"]), random.choice(armament["secondary"])
         # Send a message with the picked operator
         embed = discord.Embed(title="Police Captain Yiren says:", colour=discord.Colour.from_rgb(
-            167, 211, 166), type="rich", description=f"Heard you were looking for a Defender?\nCongrats your randomized defender is {def_pick}")
+            167, 211, 166), type="rich", description=f"Heard you were looking for a Defender?\nCongrats your randomized defender is {def_pick}\n Your suggested armament is {arm_primary}, {arm_secondary}")
         embed.set_thumbnail(url="https://i.imgur.com/Uu8Rsg1.jpg")
         channel = self.client.get_channel(self.r6_channel)
         await channel.send(embed=embed)
@@ -48,8 +58,11 @@ class Rainbow_Six(commands.Cog):
     async def operator_attacker(self, ctx):
         attackers = get_operator("attacker")
         att_pick = random.choice(attackers)
+        armament = get_armament(att_pick)
+        arm_primary, arm_secondary = random.choice(
+            armament["primary"]), random.choice(armament["secondary"])
         embed = discord.Embed(title="Police Captain Yiren says:", colour=discord.Colour.from_rgb(
-            167, 211, 166), type="rich", description=f"Heard you were looking for a Attacker?\nCongrats your randomized defender is {att_pick}")
+            167, 211, 166), type="rich", description=f"Heard you were looking for a Attacker?\nCongrats your randomized defender is {att_pick}\n Your suggested armament is {arm_primary}, {arm_secondary}")
         embed.set_thumbnail(url="https://i.imgur.com/Uu8Rsg1.jpg")
         channel = self.client.get_channel(self.r6_channel)
         await channel.send(embed=embed)
