@@ -49,7 +49,7 @@ class Rainbow_Six(commands.Cog):
             armament["primary"]), random.choice(armament["secondary"])
         # Send a message with the picked operator
         embed = discord.Embed(title="Police Captain Yiren says:", colour=discord.Colour.from_rgb(
-            167, 211, 166), type="rich", description=f"Heard you were looking for a Defender?\nCongrats your randomized defender is {def_pick}\n Your suggested armament is {arm_primary},{arm_secondary}")
+            167, 211, 166), type="rich", description=f"Heard you were looking for a Defender?\nCongrats your randomized defender is {def_pick}\n Your suggested armament is {arm_primary}, {arm_secondary}")
         embed.set_thumbnail(url="https://i.imgur.com/Uu8Rsg1.jpg")
         channel = self.client.get_channel(self.r6_channel)
         await channel.send(embed=embed)
@@ -58,8 +58,11 @@ class Rainbow_Six(commands.Cog):
     async def operator_attacker(self, ctx):
         attackers = get_operator("attacker")
         att_pick = random.choice(attackers)
+        armament = get_armament(att_pick)
+        arm_primary, arm_secondary = random.choice(
+            armament["primary"]), random.choice(armament["secondary"])
         embed = discord.Embed(title="Police Captain Yiren says:", colour=discord.Colour.from_rgb(
-            167, 211, 166), type="rich", description=f"Heard you were looking for a Attacker?\nCongrats your randomized defender is {att_pick}")
+            167, 211, 166), type="rich", description=f"Heard you were looking for a Attacker?\nCongrats your randomized defender is {att_pick}\n Your suggested armament is {arm_primary}, {arm_secondary}")
         embed.set_thumbnail(url="https://i.imgur.com/Uu8Rsg1.jpg")
         channel = self.client.get_channel(self.r6_channel)
         await channel.send(embed=embed)
