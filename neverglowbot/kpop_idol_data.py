@@ -19,6 +19,19 @@ def is_birthday(birthday):
         return False
 
 
+def calc_difference(idol_birtday):
+    today = datetime.date.today()
+    idol_birtday = idol_birtday.split(".")
+
+    idol_birtday = datetime.date(today.year, int(
+        idol_birtday[1]), int(idol_birtday[0]))
+
+    if idol_birtday < today:
+        idol_birtday = idol_birtday.replace(year=today.year+1)
+
+    return abs(idol_birtday - today)
+
+
 def get_current_hour():
     now = datetime.datetime.now()
     return now.strftime("%H")
