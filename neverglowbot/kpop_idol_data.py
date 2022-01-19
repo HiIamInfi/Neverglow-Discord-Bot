@@ -3,7 +3,6 @@ import os
 
 import discord
 from discord.ext import commands, tasks
-from discord.ext.commands import bot
 from numpy import genfromtxt
 
 TASK_CYCLE = 20

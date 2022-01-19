@@ -1,6 +1,7 @@
+from random import choice
+
 import discord
 from discord.ext import commands, tasks
-from random import choice
 
 PRESENCE_UPDATE_CYCLE = 600  # To be used as seconds
 
