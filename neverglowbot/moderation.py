@@ -6,6 +6,12 @@ class Moderation(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
 
+    # Events
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print("Extension Moderation loaded")
+
+    # Commands
     @commands.command(name="clear")
     @commands.has_permissions()
     async def commandName(self, ctx: commands.Context, amount=1):
