@@ -3,7 +3,6 @@ import os
 
 import discord
 from discord.ext import commands, tasks
-from discord.ext.commands import bot
 from numpy import genfromtxt
 
 TASK_CYCLE = 20
@@ -17,6 +16,30 @@ def is_birthday(birthday):
         return True
     else:
         return False
+
+
+def calc_difference(idol_birtday):
+    today = datetime.date.today()
+    idol_birtday = idol_birtday.split(".")
+
+    idol_birtday = datetime.date(today.year, int(
+        idol_birtday[1]), int(idol_birtday[0]))
+
+    if idol_birtday < today:
+        idol_birtday = idol_birtday.replace(year=today.year+1)
+
+    return abs(idol_birtday - today).days
+
+
+def get_deltas(idol_dataset):
+    deltas = []
+    for idol in idol_dataset:
+        new_line = (idol[0], idol[1], calc_difference(idol[1]), idol[5])
+        deltas.append(new_line)
+
+    deltas.sort(key=lambda x: x[2], reverse=False)
+
+    return deltas
 
 
 def get_current_hour():
@@ -61,11 +84,21 @@ class Kpop_Idol_Data(commands.Cog):
         print("Extension KPop Idol Data loaded")
 
     # Commands
-    @commands.command()
-    async def tester(self, ctx):
-        channel = self.client.get_channel(self.idol_channel)
-        print(channel)
-        await channel.send("Hi")
+    @commands.command(name="nextbday")
+    async def k_forecast(self, ctx):
+        data = get_idol_data()
+        delta_list = get_deltas(data)
+
+        forecast_data = delta_list[0:5]
+
+        embed = discord.Embed(
+            title=f"Thank you for asking! Next up is {forecast_data[0][0]}",
+            colour=discord.Colour.from_rgb(141, 106, 159),
+            type="rich",
+            description=f"The next Idols birthday will be {forecast_data[0][0]}, her birthday is on {forecast_data[0][1]}, in {forecast_data[0][2]} days. \n Next after that: {forecast_data[1][0]} in {forecast_data[1][2]} days, {forecast_data[2][0]} in {forecast_data[2][2]} days, {forecast_data[3][0]} in {forecast_data[3][2]} days, {forecast_data[4][0]} in {forecast_data[4][2]} days."
+        )
+        embed.set_thumbnail(url=forecast_data[0][3])
+        await ctx.send(embed=embed)
 
     # Tasks
 

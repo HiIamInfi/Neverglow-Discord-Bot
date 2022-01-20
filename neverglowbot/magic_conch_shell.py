@@ -1,11 +1,7 @@
-import random
+from random import choice
 
-import discord
-from discord import client
 from discord.ext import commands
-from discord.ext.commands import bot
-from discord.ext.commands.cog import Cog
-from discord.ext.commands.core import command
+from discord import Embed, Colour
 
 
 class Magic_Conch_Shell(commands.Cog):
@@ -42,8 +38,8 @@ class Magic_Conch_Shell(commands.Cog):
             "My sources say no.",
             "Outlook not so good.",
             "Very doubtful."]
-        embed = discord.Embed(title="Oracle Sana says:", colour=discord.Colour.from_rgb(
-            167, 211, 166), type="rich", description=f"{random.choice(responses)} \n\n  (Question was: {question})")
+        embed = Embed(title="Oracle Sana says:", colour=Colour.from_rgb(
+            167, 211, 166), type="rich", description=f"{choice(responses)} \n\n  (Question was: {question})")
         embed.set_thumbnail(url="https://i.imgur.com/bprCsC4.jpeg")
         await ctx.send(embed=embed)
 
