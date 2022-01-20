@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 
 
 def main():
+
+    # Load Environment variables and create "bot" as an instance of Discords Bot class
+
     load_dotenv()
     bot = commands.Bot(command_prefix="?")
 
@@ -16,9 +19,13 @@ def main():
         if filename.endswith(".py"):
             bot.load_extension(f"neverglowbot.{filename[:-3]}")
 
+    # Define an event that prints a status message once the bot is ready
+
     @bot.event
     async def on_ready():
         print("We up and running and running as {0.user}".format(bot))
+
+    # Runs the bot with the token
 
     bot.run(getenv("BOT_TOKEN"))
 
