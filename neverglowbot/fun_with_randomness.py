@@ -4,7 +4,7 @@ from discord.ext import commands
 from discord import Embed, Colour
 
 
-class Magic_Conch_Shell(commands.Cog):
+class Fun_with_Randomness(commands.Cog):
 
     def __init__(self, bot):
         self.client = bot
@@ -12,7 +12,7 @@ class Magic_Conch_Shell(commands.Cog):
     # Events
     @commands.Cog.listener()
     async def on_ready(self):
-        print("Extension Magic Conch Shell loaded")
+        print("Extension Fun with Randomness loaded")
 
     # Commands
     @commands.command(name="oracle", brief="Ask the magic conch shell a question")
@@ -45,4 +45,4 @@ class Magic_Conch_Shell(commands.Cog):
 
 
 def setup(bot):
-    bot.add_cog(Magic_Conch_Shell(bot))
+    bot.add_cog(Fun_with_Randomness(bot))
