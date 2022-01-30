@@ -55,8 +55,7 @@ class Fun_with_Randomness(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command(name="dice")
-    async def dice(self, ctx: commands.Context, *, input_string="1,6"):
-
+    async def dice(self, ctx: commands.Context, *, input_string="1 6"):
         try:
             input_string = input_string.split(" ")
             dices = [int(i, base=16) for i in input_string]
@@ -64,8 +63,9 @@ class Fun_with_Randomness(commands.Cog):
         except Exception as e:
             print(e)
 
-        embed = Embed(title="Placeholder says:", colour=Colour.from_rgb(
+        embed = Embed(title="Pink Yiren says:", colour=Colour.from_rgb(
             167, 211, 166), type="rich", description=f"I threw the dices for you and this is what came out {results}")
+        embed.set_thumbnail(url="https://i.imgur.com/BHcHfej.jpg")
         await ctx.send(embed=embed)
 
 
