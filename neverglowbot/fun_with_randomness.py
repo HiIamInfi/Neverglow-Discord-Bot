@@ -54,7 +54,7 @@ class Fun_with_Randomness(commands.Cog):
         embed.set_thumbnail(url="https://i.imgur.com/bprCsC4.jpeg")
         await ctx.send(embed=embed)
 
-    @commands.command(name="dice")
+    @commands.command(name="dice", brief="Throws a number of dices specified by the first number provided with sides equal to the second number prodived")
     async def dice(self, ctx: commands.Context, *, input_string="1 6"):
         try:
             input_string = input_string.split(" ")

@@ -71,14 +71,11 @@ class StatusManagement(commands.Cog):
         state = get_category()
 
         if state == "playing":
-            print("PLAYING")
             activity = discord.Game(name=get_playing())
         elif state == "watching":
-            print("WATCHING")
             activity = discord.Activity(
                 type=discord.ActivityType.watching, name=get_watching())
         elif state == "listening":
-            print("LISTENING")
             activity = discord.Activity(
                 type=discord.ActivityType.listening, name=get_listening())
 

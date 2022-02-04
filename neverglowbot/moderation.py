@@ -11,7 +11,7 @@ class Moderation(commands.Cog):
         print("Extension Moderation loaded")
 
     # Commands
-    @commands.command(name="clear")
+    @commands.command(name="clear", brief="Removes the last x messages from the channel where this command is called")
     @commands.has_permissions()
     async def commandName(self, ctx: commands.Context, amount=1):
         await ctx.channel.purge(limit=amount)

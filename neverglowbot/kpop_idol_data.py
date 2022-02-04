@@ -84,7 +84,7 @@ class Kpop_Idol_Data(commands.Cog):
         print("Extension KPop Idol Data loaded")
 
     # Commands
-    @commands.command(name="nextbday")
+    @commands.command(name="nextbday", brief="Ouputs the next Idols birthday and also names the following four")
     async def k_forecast(self, ctx):
         data = get_idol_data()
         delta_list = get_deltas(data)

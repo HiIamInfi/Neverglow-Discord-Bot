@@ -33,7 +33,7 @@ class Rainbow_Six(commands.Cog):
         print("Extension Rainbow Six loaded")
 
     # Commands
-    @commands.command(name="r6-def", brief="Let the bot choose a defender for you")
+    @commands.command(name="r6-def", brief="Let the bot choose a defender and an armament suggestion for you")
     async def operator_defender(self, ctx):
         # Get Operators and pick a random defender
         defenders = get_operator("defender")
@@ -49,7 +49,7 @@ class Rainbow_Six(commands.Cog):
         channel = self.client.get_channel(self.r6_channel)
         await channel.send(embed=embed)
 
-    @commands.command(name="r6-att", brief="Let the bot choose a attacker for you")
+    @commands.command(name="r6-att", brief="Let the bot choose a attacker and an armament suggestion for you")
     async def operator_attacker(self, ctx):
         attackers = get_operator("attacker")
         att_pick = choice(attackers)
