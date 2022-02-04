@@ -23,13 +23,13 @@ def get_streamkey(url: str):
         print(f"Request failed. Code {response.status_code}")
         return
     data = response.json()
-    print(data)
     return data["streamkey"]
 
 
 class Watch2gether(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
+        self.w2g_channel = int(getenv("WATCHTOGETHER_CHANNEL"))
 
     @commands.Cog.listener()
     async def on_ready(self):
@@ -42,7 +42,8 @@ class Watch2gether(commands.Cog):
         embed = Embed(title="Cinematographer Chaeyoung says:", colour=Colour.from_rgb(
             0, 150, 199), type="rich", description=f"Here is your Watch2Gether Room \n https://w2g.tv/rooms/{streamkey}")
         embed.set_thumbnail(url="https://i.imgur.com/qp8JDRp.jpeg")
-        await ctx.send(embed=embed)
+        channel = self.bot.get_channel(self.w2g_channel)
+        await channel.send(embed=embed)
 
     @commands.command(name="energyrestore", brief="Open a new room with the og energy restore playing")
     async def get_energyrestore(self, ctx: commands.Context):
@@ -51,7 +52,8 @@ class Watch2gether(commands.Cog):
         embed = Embed(title="Cinematographer Chaeyoung says:", colour=Colour.from_rgb(
             0, 150, 199), type="rich", description=f"Here is your Watch2Gether Room \n https://w2g.tv/rooms/{streamkey}")
         embed.set_thumbnail(url="https://i.imgur.com/qp8JDRp.jpeg")
-        await ctx.send(embed=embed)
+        channel = self.bot.get_channel(self.w2g_channel)
+        await channel.send(embed=embed)
 
     @commands.command(name="itsabout", description="Opens a new room with the ITZY/Everglow clip compilation playing")
     async def get_b_and_food(self, ctx: commands.Context):
@@ -60,7 +62,8 @@ class Watch2gether(commands.Cog):
         embed = Embed(title="Cinematographer Chaeyoung says:", colour=Colour.from_rgb(
             0, 150, 199), type="rich", description=f"Here is your Watch2Gether Room \n https://w2g.tv/rooms/{streamkey}")
         embed.set_thumbnail(url="https://i.imgur.com/qp8JDRp.jpeg")
-        await ctx.send(embed=embed)
+        channel = self.bot.get_channel(self.w2g_channel)
+        await channel.send(embed=embed)
 
 
 def setup(bot: commands.Bot):
