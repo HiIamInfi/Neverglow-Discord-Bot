@@ -8,13 +8,13 @@ from discord.ext import commands
 # Methods
 
 
-def get_operator(group):
+def get_operator(group: str) -> list:
     with open(getcwd()+"/neverglowbot/resources/r6_operators.json", "r") as read_file:
         operator_data = load(read_file)
     return operator_data[group]
 
 
-def get_armament(operator):
+def get_armament(operator: str) -> dict:
     with open(getcwd()+"/neverglowbot/resources/r6_armament.json", "r") as read_file:
         operator_armament = load(read_file)
     return operator_armament[operator]

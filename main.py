@@ -10,7 +10,7 @@ def main():
     # Load Environment variables and create "bot" as an instance of Discords Bot class
 
     load_dotenv()
-    bot = commands.Bot(command_prefix="?")
+    bot = commands.Bot(command_prefix="!")
 
     # Load Extensions
     # Load extensions (cogs) from file structure

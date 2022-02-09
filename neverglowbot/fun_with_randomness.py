@@ -5,8 +5,7 @@ from discord.ext import commands
 from discord import Embed, Colour
 
 
-def throw_dice(number=1, sides=6):
-
+def throw_dice(number: int = 1, sides: int = 6) -> list:
     results = []
 
     for i in range(number):

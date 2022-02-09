@@ -6,12 +6,12 @@ from discord.ext import commands, tasks
 PRESENCE_UPDATE_CYCLE = 600  # To be used as seconds
 
 
-def get_category():
+def get_category() -> str:
     list = ["playing", "watching", "listening"]
     return choice(list)
 
 
-def get_watching():
+def get_watching() -> str:
     list = [
         "Itzy in Paris",
         "Secret48",
@@ -27,7 +27,7 @@ def get_watching():
     return choice(list)
 
 
-def get_listening():
+def get_listening() -> str:
     list = [
         "Santiano",
         "Jemand den man kennt",
@@ -40,7 +40,7 @@ def get_listening():
     return choice(list)
 
 
-def get_playing():
+def get_playing() -> str:
     list = [
         "Spicy Noodle Cooking Simulator",
         "Attorney Simulator",
