@@ -36,9 +36,8 @@ class Watch2gether(commands.Cog):
         print("Extension Watch2gether loaded")
 
     @commands.command(name="w2g", brief="Create a new Watch2Gether Room")
-    async def get_w2g(self, ctx: commands.Context):
-        streamkey = get_streamkey(
-            "https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+    async def get_w2g(self, ctx: commands.Context, url: str = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"):
+        streamkey = get_streamkey(url)
         embed = Embed(title="Cinematographer Chaeyoung says:", colour=Colour.from_rgb(
             0, 150, 199), type="rich", description=f"Here is your Watch2Gether Room \n https://w2g.tv/rooms/{streamkey}")
         embed.set_thumbnail(url="https://i.imgur.com/qp8JDRp.jpeg")
