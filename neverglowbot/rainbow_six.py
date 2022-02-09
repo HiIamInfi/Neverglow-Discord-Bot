@@ -8,13 +8,13 @@ from discord.ext import commands
 # Methods
 
 
-def get_operator(group):
+def get_operator(group: str) -> list:
     with open(getcwd()+"/neverglowbot/resources/r6_operators.json", "r") as read_file:
         operator_data = load(read_file)
     return operator_data[group]
 
 
-def get_armament(operator):
+def get_armament(operator: str) -> dict:
     with open(getcwd()+"/neverglowbot/resources/r6_armament.json", "r") as read_file:
         operator_armament = load(read_file)
     return operator_armament[operator]
@@ -33,7 +33,7 @@ class Rainbow_Six(commands.Cog):
         print("Extension Rainbow Six loaded")
 
     # Commands
-    @commands.command(name="r6-def", brief="Let the bot choose a defender for you")
+    @commands.command(name="r6-def", brief="Let the bot choose a defender and an armament suggestion for you")
     async def operator_defender(self, ctx):
         # Get Operators and pick a random defender
         defenders = get_operator("defender")
@@ -49,7 +49,7 @@ class Rainbow_Six(commands.Cog):
         channel = self.client.get_channel(self.r6_channel)
         await channel.send(embed=embed)
 
-    @commands.command(name="r6-att", brief="Let the bot choose a attacker for you")
+    @commands.command(name="r6-att", brief="Let the bot choose a attacker and an armament suggestion for you")
     async def operator_attacker(self, ctx):
         attackers = get_operator("attacker")
         att_pick = choice(attackers)

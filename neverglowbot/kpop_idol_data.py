@@ -5,12 +5,10 @@ import discord
 from discord.ext import commands, tasks
 from numpy import genfromtxt
 
-TASK_CYCLE = 20
-
 # Auxiliary Methods
 
 
-def is_birthday(birthday):
+def is_birthday(birthday: str) -> bool:
     datestring = datetime.date.today().strftime("%d.%m.%Y")
     if datestring[:6] == birthday[:6]:
         return True
@@ -18,7 +16,7 @@ def is_birthday(birthday):
         return False
 
 
-def calc_difference(idol_birtday):
+def calc_difference(idol_birtday: str) -> int:
     today = datetime.date.today()
     idol_birtday = idol_birtday.split(".")
 
@@ -31,7 +29,7 @@ def calc_difference(idol_birtday):
     return abs(idol_birtday - today).days
 
 
-def get_deltas(idol_dataset):
+def get_deltas(idol_dataset: list) -> list:
     deltas = []
     for idol in idol_dataset:
         new_line = (idol[0], idol[1], calc_difference(idol[1]), idol[5])
@@ -42,12 +40,12 @@ def get_deltas(idol_dataset):
     return deltas
 
 
-def get_current_hour():
+def get_current_hour() -> str:
     now = datetime.datetime.now()
     return now.strftime("%H")
 
 
-def has_been_run_today():
+def has_been_run_today() -> bool:
     file = f"{os.getcwd()}/neverglowbot/resources/last_check.txt"
     with open(file, "r") as f:
         last_check = f.read()
@@ -58,13 +56,13 @@ def has_been_run_today():
         return False
 
 
-def update_last_check():
+def update_last_check() -> None:
     file = f"{os.getcwd()}/neverglowbot/resources/last_check.txt"
     with open(file, "w") as f:
         f.write(datetime.datetime.now().strftime("%d.%m.%Y,%H:%M:%S"))
 
 
-def get_idol_data():
+def get_idol_data() -> list:
     data_source = f"{os.getcwd()}/neverglowbot/resources/idol_data.csv"
     idols_array = genfromtxt(data_source, delimiter=",",
                              dtype=None, encoding="UTF-8")
@@ -84,7 +82,7 @@ class Kpop_Idol_Data(commands.Cog):
         print("Extension KPop Idol Data loaded")
 
     # Commands
-    @commands.command(name="nextbday")
+    @commands.command(name="nextbday", brief="Ouputs the next Idols birthday and also names the following four")
     async def k_forecast(self, ctx):
         data = get_idol_data()
         delta_list = get_deltas(data)
@@ -102,7 +100,7 @@ class Kpop_Idol_Data(commands.Cog):
 
     # Tasks
 
-    @tasks.loop(seconds=TASK_CYCLE)
+    @tasks.loop(seconds=20)
     async def idol_birtday_shoutout(self):
         # Check if current time is between 01:00 am and 01:59 am
         if int(get_current_hour()) != 1:
