@@ -1,7 +1,7 @@
 from random import choice
 
-import discord
-from discord.ext import commands, tasks
+import nextcord
+from nextcord.ext import commands, tasks
 
 PRESENCE_UPDATE_CYCLE = 600  # To be used as seconds
 
@@ -59,7 +59,7 @@ class StatusManagement(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print("Extension Status Management loaded")
-        await self.bot.change_presence(activity=discord.Game(get_playing()))
+        await self.bot.change_presence(activity=nextcord.Game(get_playing()))
         self.update_presence.start()
 
     # Tasks
@@ -71,15 +71,15 @@ class StatusManagement(commands.Cog):
         state = get_category()
 
         if state == "playing":
-            activity = discord.Game(name=get_playing())
+            activity = nextcord.Game(name=get_playing())
         elif state == "watching":
-            activity = discord.Activity(
-                type=discord.ActivityType.watching, name=get_watching())
+            activity = nextcord.Activity(
+                type=nextcord.ActivityType.watching, name=get_watching())
         elif state == "listening":
-            activity = discord.Activity(
-                type=discord.ActivityType.listening, name=get_listening())
+            activity = nextcord.Activity(
+                type=nextcord.ActivityType.listening, name=get_listening())
 
-        await self.bot.change_presence(activity=activity, afk=False)
+        await self.bot.change_presence(activity=activity)
 
 
 def setup(bot: commands.Bot):

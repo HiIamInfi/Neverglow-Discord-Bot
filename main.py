@@ -1,13 +1,13 @@
 from os import listdir, getenv
 
-from discord.ext import commands
-from discord.ext.commands.core import command
+from nextcord.ext import commands
+from nextcord.ext.commands.core import command
 from dotenv import load_dotenv
 
 
 def main():
 
-    # Load Environment variables and create "bot" as an instance of Discords Bot class
+    # Load Environm ent variables and create "bot" as an instance of Discords Bot class
 
     load_dotenv()
     bot = commands.Bot(command_prefix="!")

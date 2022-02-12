@@ -1,4 +1,4 @@
-from discord.ext import commands
+from nextcord.ext import commands
 from os import getenv
 from re import search
 

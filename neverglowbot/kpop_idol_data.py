@@ -1,8 +1,8 @@
 import datetime
 import os
 
-import discord
-from discord.ext import commands, tasks
+from nextcord.ext import commands, tasks
+from nextcord import Colour, Embed
 from numpy import genfromtxt
 
 # Auxiliary Methods
@@ -89,9 +89,9 @@ class Kpop_Idol_Data(commands.Cog):
 
         forecast_data = delta_list[0:5]
 
-        embed = discord.Embed(
+        embed = Embed(
             title=f"Thank you for asking! Next up is {forecast_data[0][0]}",
-            colour=discord.Colour.from_rgb(141, 106, 159),
+            colour=Colour.from_rgb(141, 106, 159),
             type="rich",
             description=f"The next Idols birthday will be {forecast_data[0][0]}, her birthday is on {forecast_data[0][1]}, in {forecast_data[0][2]} days. \n Next after that: {forecast_data[1][0]} in {forecast_data[1][2]} days, {forecast_data[2][0]} in {forecast_data[2][2]} days, {forecast_data[3][0]} in {forecast_data[3][2]} days, {forecast_data[4][0]} in {forecast_data[4][2]} days."
         )
@@ -122,9 +122,9 @@ class Kpop_Idol_Data(commands.Cog):
                 calc_age = int(datetime.date.today().strftime("%Y")) - \
                     int(element[1][6:])
                 # Create Embed
-                embed = discord.Embed(
+                embed = Embed(
                     title=f"Happy {element[3]} Day!",
-                    colour=discord.Colour.from_rgb(141, 106, 159),
+                    colour=Colour.from_rgb(141, 106, 159),
                     type="rich",
                     description=f"Today is {element[4]}'s {element[3]}'s Birtday!\nShe got {calc_age} years old today!")
                 embed.set_thumbnail(
