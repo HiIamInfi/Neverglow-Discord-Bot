@@ -1,8 +1,8 @@
 from random import choice, randint
 from typing import overload
 
-from discord.ext import commands
-from discord import Embed, Colour
+from nextcord.ext import commands
+from nextcord import Embed, Colour
 
 
 def throw_dice(number: int = 1, sides: int = 6) -> list:

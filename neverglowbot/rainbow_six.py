@@ -2,8 +2,8 @@ from json import load
 from os import getenv, getcwd
 from random import choice
 
-from discord import Colour, Embed
-from discord.ext import commands
+from nextcord import Colour, Embed
+from nextcord.ext import commands
 
 # Methods
 

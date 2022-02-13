@@ -1,8 +1,8 @@
-from discord.ext import commands
+from nextcord.ext import commands
 from os import getenv
 from requests import post
-from discord import Embed
-from discord import Colour
+from nextcord import Embed
+from nextcord import Colour
 
 
 def get_streamkey(url: str):
