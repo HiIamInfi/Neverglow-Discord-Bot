@@ -1,14 +1,22 @@
-from os import listdir, getenv
+import logging
+from os import getenv, listdir
 
+from dotenv import load_dotenv
 from nextcord.ext import commands
 from nextcord.ext.commands.core import command
-from dotenv import load_dotenv
 
 
 def main():
+    # Set up logging
+    logger = logging.getLogger('nextcord')
+    logger.setLevel(logging.DEBUG)
+    handler = logging.FileHandler(
+        filename='nextcord.log', encoding='utf-8', mode='w')
+    handler.setFormatter(logging.Formatter(
+        '%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+    logger.addHandler(handler)
 
     # Load Environm ent variables and create "bot" as an instance of Discords Bot class
-
     load_dotenv()
     bot = commands.Bot(command_prefix="!")
 
