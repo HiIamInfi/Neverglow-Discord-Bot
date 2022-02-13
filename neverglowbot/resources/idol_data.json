@@ -1,0 +1,162 @@
+{
+  "EG_YIREN": {
+    "name": "Wang Yiren",
+    "birthday": "29.12.2000",
+    "country": "China",
+    "stage_name": "Yiren",
+    "group": "Everglow",
+    "iamge_url": "https://i.imgur.com/3scsdMa.jpeg"
+  },
+  "EG_SIHYEON": {
+    "name": "Kim Sihyeon",
+    "birthday": "05.08.1999",
+    "country": "South Korea",
+    "stage_name": "Sihyeon",
+    "group": "Everglow",
+    "iamge_url": "https://i.imgur.com/i0cBC4z.jpeg"
+  },
+  "EG_ONDA": {
+    "name": "Jo Serim",
+    "birthday": "18.05.2000",
+    "country": "South Korea",
+    "stage_name": "Onda",
+    "group": "Everglow",
+    "iamge_url": "https://i.imgur.com/KVcphNI.jpeg"
+  },
+  "EG_EU": {
+    "name": "Park Jiown",
+    "birthday": "18.05.2000",
+    "country": "South Korea",
+    "stage_name": "Onda",
+    "group": "Everglow",
+    "iamge_url": "https://i.imgur.com/c7Loide.jpeg"
+  },
+  "EG_MIA": {
+    "name": "Han Eunji",
+    "birthday": "13.01.2000",
+    "country": "South Korea",
+    "stage_name": "Mia",
+    "group": "Everglow",
+    "iamge_url": "https://i.imgur.com/GoknbGG.jpeg"
+  },
+  "EG_AISHA": {
+    "name": "Heo Yoorim",
+    "birthday": "21.07.2000",
+    "country": "South Korea",
+    "stage_name": "Aisha",
+    "group": "Everglow",
+    "iamge_url": "https://i.imgur.com/Z3YUtYa.jpeg"
+  },
+  "IZ_YUNA": {
+    "name": "Shin Yuna",
+    "birthday": "09.12.2003",
+    "country": "South Korea",
+    "stage_name": "Yuna",
+    "group": "ITZY",
+    "iamge_url": "https://i.imgur.com/zLWjM3o.jpeg"
+  },
+  "IZ_YEJI": {
+    "name": "Hwang Yeji",
+    "birthday": "26.05.2000",
+    "country": "South Korea",
+    "stage_name": "Yeji",
+    "group": "ITZY",
+    "iamge_url": "https://i.imgur.com/XxEWL3D.jpeg"
+  },
+  "IZ_RYUJIN": {
+    "name": "Shin Ryujin",
+    "birthday": "17.04.2001",
+    "country": "South Korea",
+    "stage_name": "Ryujin",
+    "group": "ITZY",
+    "iamge_url": "https://i.imgur.com/C5qMjzN.jpeg"
+  },
+  "IZ_CHAERYEONG": {
+    "name": "Lee Chaeryeong",
+    "birthday": "21.07.2001",
+    "country": "South Korea",
+    "stage_name": "Chaeryeong",
+    "group": "ITZY",
+    "iamge_url": "https://i.imgur.com/m8YP7Oe.jpeg"
+  },
+  "IZ_LIA": {
+    "name": "Choi Jisu",
+    "birthday": "21.07.2000",
+    "country": "South Korea",
+    "stage_name": "Lia",
+    "group": "ITZY",
+    "iamge_url": "https://i.imgur.com/B8qb8Bh.jpeg"
+  },
+  "TW_JIHYO": {
+    "name": "Park Jihyo",
+    "birthday": "01.02.1997",
+    "country": "South Korea",
+    "stage_name": "Jihyo",
+    "group": "Twice",
+    "iamge_url": "https://i.imgur.com/SciPGtw.jpeg"
+  },
+  "TW_TZUYU": {
+    "name": "Cho Jooheee",
+    "birthday": "14.06.1999",
+    "country": "Taiwan",
+    "stage_name": "Tzuyu",
+    "group": "Twice",
+    "iamge_url": "https://i.imgur.com/7MJ5uM4.jpeg"
+  },
+  "TW_MOMO": {
+    "name": "Jang Chungdong",
+    "birthday": "09.11.1996",
+    "country": "Japan",
+    "stage_name": "Momo",
+    "group": "Twice",
+    "iamge_url": "https://i.imgur.com/xSkGWno.jpeg"
+  },
+  "TW_CHAEYOUNG": {
+    "name": "Son Chaeyoung",
+    "birthday": "23.04.1999",
+    "country": "South Korea",
+    "stage_name": "Chaeyoung",
+    "group": "Twice",
+    "iamge_url": "https://i.imgur.com/GKAs0RM.jpeg"
+  },
+  "TW_MINA": {
+    "name": "Myoui Mina",
+    "birthday": "24.05.1997",
+    "country": "Japan",
+    "stage_name": "Mina",
+    "group": "Twice",
+    "iamge_url": "https://i.imgur.com/umMw37c.jpeg"
+  },
+  "TW_SANA": {
+    "name": "Minatozaki Sana",
+    "birthday": "29.12.1996",
+    "country": "Japan",
+    "stage_name": "Sana",
+    "group": "Twice",
+    "iamge_url": "https://i.imgur.com/1GyKczM.jpeg"
+  },
+  "TW_NAYEON": {
+    "name": "Im Nayeon",
+    "birthday": "22.09.1995",
+    "country": "South Korea",
+    "stage_name": "Nayeon",
+    "group": "Twice",
+    "iamge_url": "https://i.imgur.com/IW18pFX.jpeg"
+  },
+  "TW_DAHYUN": {
+    "name": "Kim Dahyun",
+    "birthday": "28.05.1998",
+    "country": "South Korea",
+    "stage_name": "Dahyun",
+    "group": "Twice",
+    "iamge_url": "https://i.imgur.com/0DHTXyX.jpeg"
+  },
+  "TW_JEONGYEON": {
+    "name": "Yoo Jeongyeon",
+    "birthday": "01.11.1996",
+    "country": "South Korea",
+    "stage_name": "Jeongyeon",
+    "group": "Twice",
+    "iamge_url": "https://i.imgur.com/hgkMMnt.jpeg"
+  }
+}
