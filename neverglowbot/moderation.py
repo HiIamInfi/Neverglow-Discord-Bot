@@ -14,7 +14,7 @@ class Moderation(commands.Cog):
     @commands.command(name="clear", brief="Removes the last x messages from the channel where this command is called")
     @commands.has_permissions()
     async def commandName(self, ctx: commands.Context, amount=1):
-        await ctx.channel.purge(limit=amount)
+        await ctx.channel.purge(limit=amount+1)
 
 
 def setup(bot: commands.Bot):

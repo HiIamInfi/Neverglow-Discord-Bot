@@ -3,8 +3,6 @@ from random import choice
 import nextcord
 from nextcord.ext import commands, tasks
 
-PRESENCE_UPDATE_CYCLE = 600  # To be used as seconds
-
 
 def get_category() -> str:
     list = ["playing", "watching", "listening"]
@@ -64,7 +62,7 @@ class StatusManagement(commands.Cog):
 
     # Tasks
 
-    @tasks.loop(seconds=PRESENCE_UPDATE_CYCLE)
+    @tasks.loop(seconds=600)
     async def update_presence(self):
 
         activity = None
