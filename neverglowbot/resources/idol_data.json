@@ -5,7 +5,7 @@
     "country": "China",
     "stage_name": "Yiren",
     "group": "Everglow",
-    "iamge_url": "https://i.imgur.com/3scsdMa.jpeg"
+    "image_url": "https://i.imgur.com/3scsdMa.jpeg"
   },
   "EG_SIHYEON": {
     "name": "Kim Sihyeon",
@@ -13,7 +13,7 @@
     "country": "South Korea",
     "stage_name": "Sihyeon",
     "group": "Everglow",
-    "iamge_url": "https://i.imgur.com/i0cBC4z.jpeg"
+    "image_url": "https://i.imgur.com/i0cBC4z.jpeg"
   },
   "EG_ONDA": {
     "name": "Jo Serim",
@@ -21,7 +21,7 @@
     "country": "South Korea",
     "stage_name": "Onda",
     "group": "Everglow",
-    "iamge_url": "https://i.imgur.com/KVcphNI.jpeg"
+    "image_url": "https://i.imgur.com/KVcphNI.jpeg"
   },
   "EG_EU": {
     "name": "Park Jiown",
@@ -29,7 +29,7 @@
     "country": "South Korea",
     "stage_name": "Onda",
     "group": "Everglow",
-    "iamge_url": "https://i.imgur.com/c7Loide.jpeg"
+    "image_url": "https://i.imgur.com/c7Loide.jpeg"
   },
   "EG_MIA": {
     "name": "Han Eunji",
@@ -37,7 +37,7 @@
     "country": "South Korea",
     "stage_name": "Mia",
     "group": "Everglow",
-    "iamge_url": "https://i.imgur.com/GoknbGG.jpeg"
+    "image_url": "https://i.imgur.com/GoknbGG.jpeg"
   },
   "EG_AISHA": {
     "name": "Heo Yoorim",
@@ -45,7 +45,7 @@
     "country": "South Korea",
     "stage_name": "Aisha",
     "group": "Everglow",
-    "iamge_url": "https://i.imgur.com/Z3YUtYa.jpeg"
+    "image_url": "https://i.imgur.com/Z3YUtYa.jpeg"
   },
   "IZ_YUNA": {
     "name": "Shin Yuna",
@@ -53,7 +53,7 @@
     "country": "South Korea",
     "stage_name": "Yuna",
     "group": "ITZY",
-    "iamge_url": "https://i.imgur.com/zLWjM3o.jpeg"
+    "image_url": "https://i.imgur.com/zLWjM3o.jpeg"
   },
   "IZ_YEJI": {
     "name": "Hwang Yeji",
@@ -61,7 +61,7 @@
     "country": "South Korea",
     "stage_name": "Yeji",
     "group": "ITZY",
-    "iamge_url": "https://i.imgur.com/XxEWL3D.jpeg"
+    "image_url": "https://i.imgur.com/XxEWL3D.jpeg"
   },
   "IZ_RYUJIN": {
     "name": "Shin Ryujin",
@@ -69,7 +69,7 @@
     "country": "South Korea",
     "stage_name": "Ryujin",
     "group": "ITZY",
-    "iamge_url": "https://i.imgur.com/C5qMjzN.jpeg"
+    "image_url": "https://i.imgur.com/C5qMjzN.jpeg"
   },
   "IZ_CHAERYEONG": {
     "name": "Lee Chaeryeong",
@@ -77,7 +77,7 @@
     "country": "South Korea",
     "stage_name": "Chaeryeong",
     "group": "ITZY",
-    "iamge_url": "https://i.imgur.com/m8YP7Oe.jpeg"
+    "image_url": "https://i.imgur.com/m8YP7Oe.jpeg"
   },
   "IZ_LIA": {
     "name": "Choi Jisu",
@@ -85,7 +85,7 @@
     "country": "South Korea",
     "stage_name": "Lia",
     "group": "ITZY",
-    "iamge_url": "https://i.imgur.com/B8qb8Bh.jpeg"
+    "image_url": "https://i.imgur.com/B8qb8Bh.jpeg"
   },
   "TW_JIHYO": {
     "name": "Park Jihyo",
@@ -93,7 +93,7 @@
     "country": "South Korea",
     "stage_name": "Jihyo",
     "group": "Twice",
-    "iamge_url": "https://i.imgur.com/SciPGtw.jpeg"
+    "image_url": "https://i.imgur.com/SciPGtw.jpeg"
   },
   "TW_TZUYU": {
     "name": "Cho Jooheee",
@@ -101,7 +101,7 @@
     "country": "Taiwan",
     "stage_name": "Tzuyu",
     "group": "Twice",
-    "iamge_url": "https://i.imgur.com/7MJ5uM4.jpeg"
+    "image_url": "https://i.imgur.com/7MJ5uM4.jpeg"
   },
   "TW_MOMO": {
     "name": "Jang Chungdong",
@@ -109,7 +109,7 @@
     "country": "Japan",
     "stage_name": "Momo",
     "group": "Twice",
-    "iamge_url": "https://i.imgur.com/xSkGWno.jpeg"
+    "image_url": "https://i.imgur.com/xSkGWno.jpeg"
   },
   "TW_CHAEYOUNG": {
     "name": "Son Chaeyoung",
@@ -117,7 +117,7 @@
     "country": "South Korea",
     "stage_name": "Chaeyoung",
     "group": "Twice",
-    "iamge_url": "https://i.imgur.com/GKAs0RM.jpeg"
+    "image_url": "https://i.imgur.com/GKAs0RM.jpeg"
   },
   "TW_MINA": {
     "name": "Myoui Mina",
@@ -125,7 +125,7 @@
     "country": "Japan",
     "stage_name": "Mina",
     "group": "Twice",
-    "iamge_url": "https://i.imgur.com/umMw37c.jpeg"
+    "image_url": "https://i.imgur.com/umMw37c.jpeg"
   },
   "TW_SANA": {
     "name": "Minatozaki Sana",
@@ -133,7 +133,7 @@
     "country": "Japan",
     "stage_name": "Sana",
     "group": "Twice",
-    "iamge_url": "https://i.imgur.com/1GyKczM.jpeg"
+    "image_url": "https://i.imgur.com/1GyKczM.jpeg"
   },
   "TW_NAYEON": {
     "name": "Im Nayeon",
@@ -141,7 +141,7 @@
     "country": "South Korea",
     "stage_name": "Nayeon",
     "group": "Twice",
-    "iamge_url": "https://i.imgur.com/IW18pFX.jpeg"
+    "image_url": "https://i.imgur.com/IW18pFX.jpeg"
   },
   "TW_DAHYUN": {
     "name": "Kim Dahyun",
@@ -149,7 +149,7 @@
     "country": "South Korea",
     "stage_name": "Dahyun",
     "group": "Twice",
-    "iamge_url": "https://i.imgur.com/0DHTXyX.jpeg"
+    "image_url": "https://i.imgur.com/0DHTXyX.jpeg"
   },
   "TW_JEONGYEON": {
     "name": "Yoo Jeongyeon",
@@ -157,6 +157,6 @@
     "country": "South Korea",
     "stage_name": "Jeongyeon",
     "group": "Twice",
-    "iamge_url": "https://i.imgur.com/hgkMMnt.jpeg"
+    "image_url": "https://i.imgur.com/hgkMMnt.jpeg"
   }
 }
