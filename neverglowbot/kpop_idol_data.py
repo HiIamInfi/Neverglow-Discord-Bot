@@ -1,9 +1,9 @@
 import datetime
 import os
+from json import load
 
 from nextcord.ext import commands, tasks
 from nextcord import Colour, Embed
-from numpy import genfromtxt
 
 # Auxiliary Methods
 
@@ -32,7 +32,8 @@ def calc_difference(idol_birtday: str) -> int:
 def get_deltas(idol_dataset: list) -> list:
     deltas = []
     for idol in idol_dataset:
-        new_line = (idol[0], idol[1], calc_difference(idol[1]), idol[5])
+        new_line = (idol["name"], idol["birthday"],
+                    calc_difference(idol["birthday"]), idol["image_url"])
         deltas.append(new_line)
 
     deltas.sort(key=lambda x: x[2], reverse=False)
@@ -62,11 +63,26 @@ def update_last_check() -> None:
         f.write(datetime.datetime.now().strftime("%d.%m.%Y,%H:%M:%S"))
 
 
-def get_idol_data() -> list:
-    data_source = f"{os.getcwd()}/neverglowbot/resources/idol_data.csv"
-    idols_array = genfromtxt(data_source, delimiter=",",
-                             dtype=None, encoding="UTF-8")
-    return idols_array
+def get_keys() -> list:
+    with open(os.getcwd()+"/neverglowbot/resources/idol_data.json", "r") as read_file:
+        keys = load(read_file)
+    return keys
+
+
+def get_idol(idol: str) -> dict:
+    with open(os.getcwd()+"/neverglowbot/resources/idol_data.json", "r") as read_file:
+        idol_data = load(read_file)
+    return idol_data[idol]
+
+
+def get_idol_data(keys: list) -> list:
+    idol_data = []
+
+    for key in keys:
+        new_idol = get_idol(key)
+        idol_data.append(new_idol)
+
+    return idol_data
 
 
 class Kpop_Idol_Data(commands.Cog):
@@ -74,20 +90,21 @@ class Kpop_Idol_Data(commands.Cog):
     def __init__(self, bot):
         self.client = bot
         self.idol_channel = int(os.getenv("IDOL_ALERT_CHANNEL"))
-        self.idol_birtday_shoutout.start()
 
     # Events
     @commands.Cog.listener()
     async def on_ready(self):
         print("Extension KPop Idol Data loaded")
+        self.idol_birtday_shoutout.start()
 
     # Commands
     @commands.command(name="nextbday", brief="Ouputs the next Idols birthday and also names the following four")
     async def k_forecast(self, ctx):
-        data = get_idol_data()
+        data = get_idol_data(get_keys())
         delta_list = get_deltas(data)
 
         forecast_data = delta_list[0:5]
+        print(forecast_data)
 
         embed = Embed(
             title=f"Thank you for asking! Next up is {forecast_data[0][0]}",
@@ -113,20 +130,20 @@ class Kpop_Idol_Data(commands.Cog):
         cache = []
         # Search for positive Hits
         for idol in data:
-            if is_birthday(idol[1]):
+            if is_birthday(idol["birthday"]):
                 cache.append(idol)
         # Prepare & send messages
         for element in cache:
             try:
                 # Calc age based on current day
                 calc_age = int(datetime.date.today().strftime("%Y")) - \
-                    int(element[1][6:])
+                    int(element["birthday"][6:])
                 # Create Embed
                 embed = Embed(
-                    title=f"Happy {element[3]} Day!",
+                    title=f"Happy { element['stage_name'] } Day!",
                     colour=Colour.from_rgb(141, 106, 159),
                     type="rich",
-                    description=f"Today is {element[4]}'s {element[3]}'s Birtday!\nShe got {calc_age} years old today!")
+                    description=f"Today is {element['group']}'s {element['stage_name']}'s Birtday!\nShe got {calc_age} years old today!")
                 embed.set_thumbnail(
                     url=element[5])
                 channel = self.client.get_channel(self.idol_channel)
