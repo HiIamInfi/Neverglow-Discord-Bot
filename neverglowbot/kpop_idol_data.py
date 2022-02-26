@@ -145,7 +145,7 @@ class Kpop_Idol_Data(commands.Cog):
                     type="rich",
                     description=f"Today is {element['group']}'s {element['stage_name']}'s Birtday!\nShe got {calc_age} years old today!")
                 embed.set_thumbnail(
-                    url=element[5])
+                    url=element["image_url"])
                 channel = self.client.get_channel(self.idol_channel)
                 # Send message
                 await channel.send(embed=embed)
