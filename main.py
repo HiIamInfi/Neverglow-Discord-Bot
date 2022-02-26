@@ -36,7 +36,7 @@ def main():
     @bot.command()
     async def load(ctx, extension):
         bot.load_extension(f"neverglowbot.{extension}")
-        await ctx.send("Loaded {extension}")
+        await ctx.send(f"Loaded {extension}")
 
     @bot.command()
     async def unload(ctx, extension):
