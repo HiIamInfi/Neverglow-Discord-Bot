@@ -1,0 +1,312 @@
+{
+  "Thorn": {
+    "name": "Thorn",
+    "primary": ["UZK50GI", "M870"],
+    "secondary": ["1911 Tacops", "C75 Auto"]
+  },
+  "Thunderbird": {
+    "name": "Thunderbird",
+    "primary": ["Spear .308", "SPAS-15"],
+    "secondary": ["Q-929", "Bearing 9"]
+  },
+  "Aruni": {
+    "name": "Aruni",
+    "primary": ["P10 RONI", "Mk 14 EBR"],
+    "secondary": ["PRB92"]
+  },
+  "Melusi": {
+    "name": "Melusi",
+    "primary": ["MP5", "Super 90"],
+    "secondary": ["RG15"]
+  },
+  "Oryx": {
+    "name": "Oryx",
+    "primary": ["T-5 SMG", "SPAS-12"],
+    "secondary": ["Bailiff 410", "USP40"]
+  },
+  "Wamai": {
+    "name": "Wamai",
+    "primary": ["AUG 12", "MP5K"],
+    "secondary": ["Keratos .357", "P12"]
+  },
+  "Goyo": {
+    "name": "Goyo",
+    "primary": ["Vector .45 ACP", "TCSG12"],
+    "secondary": ["P229"]
+  },
+  "Warden": {
+    "name": "Warden",
+    "primary": ["M590A1", "MPX"],
+    "secondary": ["P-10C", "SMG-12"]
+  },
+  "Mozzie": {
+    "name": "Mozzie",
+    "primary": ["Commando 9", "P10 RONI"],
+    "secondary": ["SDP 9mm"]
+  },
+  "Kaid": {
+    "name": "Kaid",
+    "primary": ["AUG A3", "TCSG12"],
+    "secondary": [".44 Mag Semi Auto", "LFP586"]
+  },
+  "Clash": {
+    "name": "Clash",
+    "primary": ["CCE Shield"],
+    "secondary": ["Super Shorty", "SPSMG9"]
+  },
+  "Maestro": {
+    "name": "Maestro",
+    "primary": ["ALDA 5.56", "ACS12"],
+    "secondary": ["Bailiff 410", "Keratos .357"]
+  },
+  "Alibi": {
+    "name": "Alibi",
+    "primary": ["Mx4 Storm", "ACS12"],
+    "secondary": ["Keratos .357", "Bailiff 410"]
+  },
+  "Vigil": {
+    "name": "Vigil",
+    "primary": ["K1A", "BOSG.12.2"],
+    "secondary": ["C75 Auto", "SMG-12"]
+  },
+  "Ela": {
+    "name": "Ela",
+    "primary": ["Scorpion EVO 3 A1", "FO-12"],
+    "secondary": ["RG15"]
+  },
+  "Lesion": {
+    "name": "Lesion",
+    "primary": ["SIX12 SD", "T-5 SMG"],
+    "secondary": ["Q-929"]
+  },
+  "Mira": {
+    "name": "Mira",
+    "primary": ["Vector .45 ACP", "ITA12L"],
+    "secondary": ["ITA12S", "USP40"]
+  },
+  "Echo": {
+    "name": "Echo",
+    "primary": ["SuperNova", "MP5SD"],
+    "secondary": ["P229", "Bearing 9"]
+  },
+  "Caveira": {
+    "name": "Caveira",
+    "primary": ["M12", "SPAS-15"],
+    "secondary": ["Luison"]
+  },
+  "Valkyrie": {
+    "name": "Valkyrie",
+    "primary": ["MPX", "SPAS-12"],
+    "secondary": ["D-50"]
+  },
+  "Frost": {
+    "name": "Frost",
+    "primary": ["Super 90", "9mm C1"],
+    "secondary": ["Mk1 9mm", "ITA12S"]
+  },
+  "Mute": {
+    "name": "Mute",
+    "primary": ["MP5", "M590A1"],
+    "secondary": ["P226 Mk 25", "SMG-11"]
+  },
+  "Smoke": {
+    "name": "Smoke",
+    "primary": ["FMG-9", "M590A1"],
+    "secondary": ["P226 Mk 25", "SMG-11"]
+  },
+  "Castle": {
+    "name": "Castle",
+    "primary": ["UMP45", "M1014"],
+    "secondary": ["5.7 USG", "Super Shorty"]
+  },
+  "Pulse": {
+    "name": "Pulse",
+    "primary": ["M1014", "UMP45"],
+    "secondary": ["M45 MEUSOC", "5.7 USG"]
+  },
+  "Doc": {
+    "name": "Doc",
+    "primary": ["SG-CQB", "MP5", "P90"],
+    "secondary": ["P9", "LFP586"]
+  },
+  "Rook": {
+    "name": "Rook",
+    "primary": ["P90", "MP5", "SG-CQB"],
+    "secondary": ["LFP586", "P9"]
+  },
+  "Jaeger": {
+    "name": "Jaeger",
+    "primary": ["M870", "416-C Carbine"],
+    "secondary": ["P12"]
+  },
+  "Bandit": {
+    "name": "Bandit",
+    "primary": ["MP7", "M870"],
+    "secondary": ["P12"]
+  },
+  "Tachanka": {
+    "name": "Tachanka",
+    "primary": ["DP27", "9*19VSN"],
+    "secondary": ["GSh-18", "PMM"]
+  },
+  "Kapkan": {
+    "name": "Kapkan",
+    "primary": ["9*19VSN", "SASG-12"],
+    "secondary": ["PMM", "GSh-18"]
+  },
+  "Osa": {
+    "name": "Osa",
+    "primary": ["556XI", "PWD9"],
+    "secondary": ["PMM"]
+  },
+  "Flores": {
+    "name": "Flores",
+    "primary": ["AR33", "SR-25"],
+    "secondary": ["GSh-18"]
+  },
+  "Zero": {
+    "name": "Zero",
+    "primary": ["SC3000K", "MP7"],
+    "secondary": ["5.7 USG", "GONNE-6"]
+  },
+  "Ace": {
+    "name": "Ace",
+    "primary": ["AK-12", "M1014"],
+    "secondary": ["P9"]
+  },
+  "Iana": {
+    "name": "Iana",
+    "primary": ["ARX200", "G36C"],
+    "secondary": ["Mk1 9mm", "GONNE-6"]
+  },
+  "Kali": {
+    "name": "Kali",
+    "primary": ["CSRX 300"],
+    "secondary": ["C75 Auto", "SPSMG9"]
+  },
+  "Amaru": {
+    "name": "Amaru",
+    "primary": ["G8A1", "SuperNova"],
+    "secondary": ["GONNE-6", "SMG-11"]
+  },
+  "Nokk": {
+    "name": "Nokk",
+    "primary": ["FMG-9", "SIX12 SD"],
+    "secondary": ["5.7 USG", "D-50"]
+  },
+  "Gridlock": {
+    "name": "Gridlock",
+    "primary": ["F90", "M249 SAW"],
+    "secondary": ["Super Shorty", "GONNE-6"]
+  },
+  "Nomad": {
+    "name": "Nomad",
+    "primary": ["AK-74", "ARX200"],
+    "secondary": [".44 Mag Semi Auto", "PRB92"]
+  },
+  "Maverick": {
+    "name": "Maverick",
+    "primary": ["AR-15.50", "M4"],
+    "secondary": ["1911 Tacops"]
+  },
+  "Lion": {
+    "name": "Lion",
+    "primary": ["V308", "417", "SG-CQB"],
+    "secondary": ["GONNE-6", "LFP586"]
+  },
+  "Finka": {
+    "name": "Finka",
+    "primary": ["Spear .308", "6P41", "SASG-12"],
+    "secondary": ["PMM", "GONNE-6"]
+  },
+  "Dokkaebi": {
+    "name": "Dokkaebi",
+    "primary": ["Mk 14 EBR", "BOSG.12.2"],
+    "secondary": ["GONNE-6", "SMG-12"]
+  },
+  "Zofia": {
+    "name": "Zofia",
+    "primary": ["LMG-E", "M762"],
+    "secondary": ["RG15"]
+  },
+  "Ying": {
+    "name": "Ying",
+    "primary": ["T-95 LSW", "SIX12"],
+    "secondary": ["Q-929"]
+  },
+  "Jackal": {
+    "name": "Jackal",
+    "primary": ["C7E", "PWD9", "ITA12L"],
+    "secondary": ["ITA12S", "USP40"]
+  },
+  "Hibana": {
+    "name": "Hibana",
+    "primary": ["Type-89", "SuperNova"],
+    "secondary": ["P229", "Bearing 9"]
+  },
+  "Capitao": {
+    "name": "Capitao",
+    "primary": ["PARA-308", "M249"],
+    "secondary": ["PRB92"]
+  },
+  "Blackbeard": {
+    "name": "Blackbeard",
+    "primary": ["Mk17 CQB", "SR-25"],
+    "secondary": ["D-50"]
+  },
+  "Buck": {
+    "name": "Buck",
+    "primary": ["C8-SFW", "CAMRS"],
+    "secondary": ["Mk1 9mm"]
+  },
+  "Sledge": {
+    "name": "Sledge",
+    "primary": ["M590A1", "L85A2"],
+    "secondary": ["P226 Mk 25"]
+  },
+  "Thatcher": {
+    "name": "Thatcher",
+    "primary": ["AR33", "L85A2", "M590A1"],
+    "secondary": ["P226 Mk 25"]
+  },
+  "Ash": {
+    "name": "Ash",
+    "primary": ["G36C", "R4-C"],
+    "secondary": ["M45 MEUSOC", "5.7 USG"]
+  },
+  "Thermite": {
+    "name": "Thermite",
+    "primary": ["M1014", "556XI"],
+    "secondary": ["M45 MEUSOC", "5.7 USG"]
+  },
+  "Montagne": {
+    "name": "Montagne",
+    "primary": ["Extensible Shield"],
+    "secondary": ["P9", "LFP586"]
+  },
+  "Twitch": {
+    "name": "Twitch",
+    "primary": ["F2", "417", "SG-CQB"],
+    "secondary": ["P9", "LFP586"]
+  },
+  "Blitz": {
+    "name": "Blitz",
+    "primary": ["G52-Tactical Shield"],
+    "secondary": ["P12"]
+  },
+  "IQ": {
+    "name": "IQ",
+    "primary": ["AUG A2", "552 Commando", "G8A1"],
+    "secondary": ["P12"]
+  },
+  "Fuze": {
+    "name": "Fuze",
+    "primary": ["Ballistic Shield", "6P41", "AK-12"],
+    "secondary": ["PMM", "GSh-18"]
+  },
+  "Glaz": {
+    "name": "Glaz",
+    "primary": ["OTs-03"],
+    "secondary": ["PMM", "GONNE-6"]
+  }
+}
