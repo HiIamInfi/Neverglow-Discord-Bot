@@ -1,6 +1,7 @@
 import logging
 from os import getenv, listdir
 
+from nextcord import Intents
 from dotenv import load_dotenv
 from nextcord.ext import commands
 from nextcord.ext.commands.core import command
@@ -16,9 +17,15 @@ def main():
         '%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
     logger.addHandler(handler)
 
+    # Opt into Nextcord Intents
+
+    intents = Intents.default()
+    intents.message_content = True
+    intents.members = True
+
     # Load Environm ent variables and create "bot" as an instance of Discords Bot class
     load_dotenv()
-    bot = commands.Bot(command_prefix="!")
+    bot = commands.Bot(command_prefix="!", intents=intents)
 
     # Load Extensions
     # Load extensions (cogs) from file structure
