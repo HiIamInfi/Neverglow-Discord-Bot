@@ -1,33 +1,25 @@
-from turtle import title
 from nextcord.ext import commands, tasks
 import nextcord
-import os
-import json
+from os import getenv
+from json import load
 import requests
 from random import randint, choice
 import praw
 
 
-def scrape_meme(topic=0):
+def get_meme_config() -> list:
+    with open(getenv("CONFIG")+"/meme_config.json", "r") as read_file:
+        meme_data = load(read_file)
+    return meme_data
+
+
+def scrape_meme(topic: str):
     reddit = praw.Reddit(
-        client_id=os.getenv("REDDIT_CLIENT_ID"),
-        client_secret=os.getenv("REDDIT_SECRET"),
-        user_agent=os.getenv("REDDIT_USER_AGENT"),
+        client_id=getenv("REDDIT_CLIENT_ID"),
+        client_secret=getenv("REDDIT_SECRET"),
+        user_agent=getenv("REDDIT_USER_AGENT"),
         check_for_async=False
     )
-
-    topics = [
-        "dankmemes",
-        "memes",
-        "AdviceAnimals",
-        "MemeEconomy",
-        "me_irl",
-        "ComedyCemetery",
-        "terriblefacebookmemes"
-    ]
-
-    if topic == 0:
-        topic = choice(topics)
 
     subreddit = reddit.subreddit(topic)
     meme = subreddit.random()
@@ -60,7 +52,8 @@ def scrape_meme(topic=0):
 class Memes(commands.Cog):
     def __init__(self, bot: commands.Bot):
         self.bot = bot
-        self.meme_channel = int(os.getenv("MEME_CHANNEL"))
+        self.config = get_meme_config()
+        self.meme_channel = int(getenv("MEME_CHANNEL"))
 
     # Events
     @commands.Cog.listener()
@@ -72,15 +65,16 @@ class Memes(commands.Cog):
     @commands.command(name="meme", brief="Fetches a meme")
     async def meme(self, ctx: commands.Context):
 
-        res = scrape_meme()
+        res = scrape_meme(choice(self.config["subreddits"]))
 
         title = res["title"]
         url = res["url"]
         subreddit = res["subreddit"]
         author = res["author"]
+        link = res["post_link"]
 
         embed = nextcord.Embed(
-            title=title, colour=nextcord.Colour.from_rgb(randint(0, 255), randint(0, 255), randint(0, 255)))
+            title=title, colour=nextcord.Colour.from_rgb(randint(0, 255), randint(0, 255), randint(0, 255)), url=link)
         embed.set_image(url=url)
         embed.set_footer(
             text=f"{author} | Subreddit: {subreddit}")
@@ -91,15 +85,16 @@ class Memes(commands.Cog):
     async def hourly_meme(self):
         channel = self.bot.get_channel(self.meme_channel)
 
-        res = scrape_meme()
+        res = scrape_meme(choice(self.config["subreddits"]))
 
         title = res["title"]
         url = res["url"]
         subreddit = res["subreddit"]
         author = res["author"]
+        link = res["post_link"]
 
         embed = nextcord.Embed(
-            title=title, colour=nextcord.Colour.from_rgb(randint(0, 255), randint(0, 255), randint(0, 255)))
+            title=title, colour=nextcord.Colour.from_rgb(randint(0, 255), randint(0, 255), randint(0, 255)), url=link)
         embed.set_image(url=url)
         embed.set_footer(
             text=f"{author} | Subreddit: {subreddit}")

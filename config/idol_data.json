@@ -1,4 +1,12 @@
 {
+  "TESTING_IDOL": {
+    "name": "I am not a real idol",
+    "birthday": "26.09.2000",
+    "country": "Fantasy Land",
+    "stage_name": "Fake Idol",
+    "group": "Fake group",
+    "image_url": "https://i.imgur.com/3scsdMa.jpeg"
+  },
   "EG_YIREN": {
     "name": "Wang Yiren",
     "birthday": "29.12.2000",
