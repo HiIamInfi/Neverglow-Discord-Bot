@@ -117,8 +117,8 @@ class Kpop_Idol_Data(commands.Cog):
     @tasks.loop(seconds=20)
     async def idol_birthday_shoutout(self):
         # Check if current time is between 00:00 am and 00:59 am
-        # if int(datetime.datetime.now().strftime("%H")) != 0:
-        #    return
+        if int(datetime.datetime.now().strftime("%H")) != 0:
+            return
         # Check if task was already completed today
         if self.run.date() == datetime.datetime.now().date():
             return
