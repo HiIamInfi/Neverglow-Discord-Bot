@@ -129,7 +129,6 @@ class Kpop_Idol_Data(commands.Cog):
             if idol.diff_next == 0:
                 cache.append(idol)
 
-        print(cache)
         # Prepare & send messages
         for element in cache:
             try:
