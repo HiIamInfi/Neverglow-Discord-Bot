@@ -87,7 +87,8 @@ class Memes(commands.Cog):
     async def hourly_meme(self):
         channel = self.bot.get_channel(self.meme_channel)
 
-        res = scrape_meme()
+        topic = choice(self.config["subreddits"])
+        res = scrape_meme(topic)
 
         title = res["title"]
         url = res["url"]
