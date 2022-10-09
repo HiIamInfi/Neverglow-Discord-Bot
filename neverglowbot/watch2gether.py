@@ -16,7 +16,7 @@ def get_streamkey(url: str):
         "bg_color": "#000000",  # Watch2Gether Background Color
         "bg_opacity": 100  # Watch2Gether Background opacity"
     }
-    response = post("https://w2g.tv/rooms/create.json",
+    response = post("https://api.w2g.tv/rooms/create.json",
                     headers=headers, json=body)
 
     if response.status_code != 200:
